@@ -16,5 +16,9 @@
         &:last-of-type {
             margin-bottom: 0;
         }
+        &:focus {
+            border: 1px solid #65A2F7;
+            border-radius: 2px;
+        }
     }
 }
