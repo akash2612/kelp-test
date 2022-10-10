@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {CdkDragDrop, moveItemInArray} from '@angular/cdk/drag-drop';
-import SwiperCore, { Navigation} from 'swiper';
+// import SwiperCore, { Navigation} from 'swiper';
 import {FormControl} from '@angular/forms';
 
-SwiperCore.use([Navigation]);
+// SwiperCore.use([Navigation]);
 
 @Component({
   selector: 'app-listing',
