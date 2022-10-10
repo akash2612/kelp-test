@@ -91,14 +91,18 @@
                         </div>
                         <div class="sub-head">
                             <div class="bs-swiper">
-                                <owl-carousel-o [options]="customOptions">
-                                    <ng-template carouselSlide><div class="img-wrap"><img src="../assets/images/profile.png" alt=""></div></ng-template>  
-                                    <ng-template carouselSlide><div class="img-wrap"><img src="../assets/images/profile.png" alt=""></div></ng-template>  
-                                    <ng-template carouselSlide><div class="img-wrap"><img src="../assets/images/profile.png" alt=""></div></ng-template>  
-                                    <ng-template carouselSlide><div class="img-wrap"><img src="../assets/images/profile.png" alt=""></div></ng-template>  
-                                    <ng-template carouselSlide><div class="img-wrap"><img src="../assets/images/profile.png" alt=""></div></ng-template>  
-                                    <ng-template carouselSlide><div class="img-wrap"><img src="../assets/images/profile.png" alt=""></div></ng-template>  
-                                  </owl-carousel-o>
+                                <swiper
+                                [slidesPerView]="4"
+                                [spaceBetween]="35"
+                                [navigation]="true"
+                                >
+                                <ng-template swiperSlide><div class="img-wrap"><img src="../assets/images/profile.png" alt=""></div></ng-template>
+                                <ng-template swiperSlide><div class="img-wrap"><img src="../assets/images/profile.png" alt=""></div></ng-template>
+                                <ng-template swiperSlide><div class="img-wrap"><img src="../assets/images/profile.png" alt=""></div></ng-template>
+                                <ng-template swiperSlide><div class="img-wrap"><img src="../assets/images/profile.png" alt=""></div></ng-template>
+                                <ng-template swiperSlide><div class="img-wrap"><img src="../assets/images/profile.png" alt=""></div></ng-template>
+                                <ng-template swiperSlide><div class="img-wrap"><img src="../assets/images/profile.png" alt=""></div></ng-template>
+                                </swiper>
                             </div>
                             <div class="reference-head">
                                 <span>Leads</span>
