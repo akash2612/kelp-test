@@ -1,0 +1,6 @@
+// mixin
+
+@function get-vw($target) {
+    $vw-context: (1440*.01) * 1px;
+    @return ($target/$vw-context) * 1vw;
+}

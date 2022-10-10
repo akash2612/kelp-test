@@ -1,0 +1,36 @@
+// bs-swiper
+
+.bs-swiper {
+    .img-wrap {
+        width: get-vw(56px);
+        margin: 0 auto;
+        img {
+            width: 100%;
+        }
+    }
+    .swiper {
+        padding: 0 get-vw(25px);
+    }
+    .swiper-button-prev,
+    .swiper-button-next {
+        width: get-vw(15px);
+        &:after {
+            width: get-vw(7px);
+            height: get-vw(12px);
+            background-size: cover;
+            background-position: center;
+        }
+    }
+    .swiper-button-next {
+        right: 5px;
+        &:after {
+            background-image: url(../../images/next.svg);
+        }
+    }
+    .swiper-button-prev {
+        left: 0;
+        &:after {
+            background-image: url(../../images/prev.svg);
+        }
+    }
+}

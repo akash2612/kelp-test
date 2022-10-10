@@ -1,1 +1,45 @@
 /* You can add global styles to this file, and also import other style files */
+/*
+  @Author : Digital Salt Technologies
+  @Project : Kelp
+  @Dev : UI Dev
+  @Date : 07/10/2022;
+*/
+
+
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+/* config */
+
+// @import "fonts/font";
+
+/* config */
+@import "assets/sass/config/mixin";
+@import "assets/sass/config/variables";
+
+/* element */
+
+@import "assets/sass/elements/reset";
+@import "assets/sass/elements/normalize";
+@import "assets/sass/elements/elements";
+
+/* common */
+
+@import "assets/sass/common/common";
+
+/* base include */
+
+@import "assets/sass/base/bs-header";
+@import "assets/sass/base/bs-section";
+@import "assets/sass/base/bs-card-table";
+@import "assets/sass/base/bs-swiper";
+
+/* layout */
+@import "assets/sass/layout/lyt-main";
+
+/* pages */
+
+
+/* modules */
+@import "assets/sass/module/mod-candidate-card";
+/* plugins */

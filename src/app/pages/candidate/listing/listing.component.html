@@ -1,0 +1,355 @@
+<div class="lyt-card-list">
+    <section>
+        <div class="bs-section">
+            <div class="container">
+                <div class="sec-head">
+                    <h2 class="sec-title">Offer Extended</h2>
+                </div>
+                <div class="sec-cont">
+                    <ul class="card-list">
+                        <li class="card-item">
+                            <div class="mod-candidate-card">
+                                <div class="candidate-info">
+                                    <span class="img-wrap">
+                                        <img src="../assets/images/profile.png" alt="profile">
+                                    </span>
+                                    <div class="data-wrap">
+                                        <strong class="name">Anil Kapoor</strong>
+                                        <span class="text">Director</span>, 
+                                        <span class="text">Piramal Enterprises</span>
+                                        <span class="text cm-line-break">Kolkata</span>
+                                    </div>
+                                </div>
+                                <div class="offer-wrap">
+                                    <ul class="offer-list">
+                                        <li class="offer-item">
+                                            <span class="title">Offer Extended on</span>
+                                            <span class="data">21 Jul 2020</span>
+                                        </li>
+                                        <li class="offer-item">
+                                            <span class="title">Offer Accepted on</span>
+                                            <span class="data">23 Jul 2020</span>
+                                        </li>
+                                        <li class="offer-item">
+                                            <span class="title">Date of Joining</span>
+                                            <span class="data">1 Sep 2020</span>
+                                        </li>
+                                        <li class="offer-item">
+                                            <span class="title">Joining Status</span>
+                                            <span class="data">
+                                                <mat-select [formControl]="joiningStatus">
+                                                    <mat-select-trigger>
+                                                      {{joiningStatus.value ? joiningStatus.value[0] : ''}}<span class="icon-wrap"><img src={{joiningStatus.value}}></span>
+                                                      <!-- {{toppings}} -->
+                                                    </mat-select-trigger>
+                                                    <mat-option *ngFor="let jt of joiningStatusList" [value]="jt.value"><span class="icon-wrap"><img src={{jt.value}}></span></mat-option>
+                                                </mat-select>
+                                            </span>
+                                        </li>
+                                        <li class="offer-item">
+                                            <span class="title">B.V</span>
+                                            <span class="data">
+                                                <mat-select [formControl]="bvStatus">
+                                                    <mat-select-trigger>
+                                                      {{bvStatus.value ? bvStatus.value[0] : ''}}<span class="icon-wrap"><img src={{bvStatus.value}}></span>
+                                                      <!-- {{toppings}} -->
+                                                    </mat-select-trigger>
+                                                    <mat-option *ngFor="let jt of joiningStatusList" [value]="jt.value"><span class="icon-wrap"><img src={{jt.value}}></span></mat-option>
+                                                </mat-select>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="comment-wrap">
+                                    <p class="text">Metus etiam. Platea aliquet vulputate. Egestas. Lacinia ultrices. Pharetra. Quisque odio morbi sod tea aliquet vulputate.teame</p>
+                                </div>
+                                <button mat-button [matMenuTriggerFor]="menu" class="more-btn"><span class="icon icon-more"></span></button>
+                                <mat-menu #menu="matMenu">
+                                    <button mat-menu-item>Edit Comment</button>
+                                    <button mat-menu-item>Hide Candidate</button>
+                                </mat-menu>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="bs-section">
+            <div class="container">
+                <div class="sec-head">
+                    <h2 class="sec-title">Prospects</h2>
+                </div>
+                <div class="sec-cont">
+                    <div class="bs-card-table">
+                        <div class="table-head">
+                            <strong>Candidate Details</strong>
+                            <strong>Interview schedule</strong>
+                            <strong>Reference Check</strong>
+                            <strong>comments</strong>
+                        </div>
+                        <div class="sub-head">
+                            <div class="bs-swiper">
+                                <swiper
+                                [slidesPerView]="4"
+                                [spaceBetween]="35"
+                                [navigation]="true"
+                                >
+                                <ng-template swiperSlide><div class="img-wrap"><img src="../assets/images/profile.png" alt=""></div></ng-template>
+                                <ng-template swiperSlide><div class="img-wrap"><img src="../assets/images/profile.png" alt=""></div></ng-template>
+                                <ng-template swiperSlide><div class="img-wrap"><img src="../assets/images/profile.png" alt=""></div></ng-template>
+                                <ng-template swiperSlide><div class="img-wrap"><img src="../assets/images/profile.png" alt=""></div></ng-template>
+                                <ng-template swiperSlide><div class="img-wrap"><img src="../assets/images/profile.png" alt=""></div></ng-template>
+                                <ng-template swiperSlide><div class="img-wrap"><img src="../assets/images/profile.png" alt=""></div></ng-template>
+                                </swiper>
+                            </div>
+                            <div class="reference-head">
+                                <span>Leads</span>
+                                <span>Captured</span>
+                            </div>
+                        </div>
+                        <div class="table-body">
+                            <ul class="card-list">
+                                <li class="card-item">
+                                    <div class="mod-candidate-card">
+                                        <div class="candidate-info">
+                                            <span class="img-wrap">
+                                                <img src="../assets/images/profile.png" alt="profile">
+                                            </span>
+                                            <div class="data-wrap">
+                                                <strong class="name">Aniket Joshi</strong>
+                                                <span class="text">Director</span>
+                                                <span class="text">Piramal Enterprises</span>
+                                                <span class="text cm-line-break">Mumbai</span>
+                                            </div>
+                                        </div>
+                                        <div class="status-wrap">
+                                            <ul class="status-list">
+                                                <li class="status-item">
+                                                    <button class="icon-text">
+                                                        <span class="icon icon-hire"></span>
+                                                        <span class="text">Hire</span>
+                                                    </button>
+                                                    <span class="text">1 Jul 2018</span>
+                                                </li>
+                                                <li class="status-item">
+                                                    <span class="text"><span class="cm-line-break">Awaiting</span><span class="cm-line-break">Feedback</span></span>
+                                                </li>
+                                                <li class="status-item">
+                                                    <button class="icon-text">
+                                                        <span class="icon icon-undecided"></span>
+                                                        <span class="text">Undecided</span>
+                                                    </button>
+                                                    <span class="text">1 Jul 2018</span>
+                                                </li>
+                                                <li class="status-item">
+                                                    <button class="icon-text typ-no-click">
+                                                        <span class="icon icon-cal"></span>
+                                                        <span class="text">1 Jul 2018</span>
+                                                    </button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="count-wrap">
+                                            <span class="count">7</span>
+                                            <span class="count">3</span>
+                                        </div>
+                                        <div class="comment-wrap">
+                                            <p class="text">Metus etiam. Platea aliquet vulputate. Egestas. Lacinia ultrices. Pharetra. Quisque odio morbi sod tea aliquet vulputate.teame</p>
+                                        </div>
+                                        <button mat-button [matMenuTriggerFor]="menu" class="more-btn"><span class="icon icon-more"></span></button>
+                                        <mat-menu #menu="matMenu">
+                                            <button mat-menu-item>Edit Comment</button>
+                                            <button mat-menu-item>Hide Candidate</button>
+                                        </mat-menu>
+                                    </div>
+                                </li>
+                                <li class="card-item">
+                                    <div class="mod-candidate-card">
+                                        <div class="candidate-info">
+                                            <span class="img-wrap">
+                                                <img src="../assets/images/profile.png" alt="profile">
+                                            </span>
+                                            <div class="data-wrap">
+                                                <strong class="name">Kunjan Kumar</strong>
+                                                <span class="text">Director</span>
+                                                <span class="text">Housing and Development…</span>
+                                                <span class="text cm-line-break">New Delhi</span>
+                                            </div>
+                                        </div>
+                                        <div class="status-wrap">
+                                            <ul class="status-list">
+                                                <li class="status-item">
+                                                    <button class="icon-text">
+                                                        <span class="icon icon-hire"></span>
+                                                        <span class="text">Hire</span>
+                                                    </button>
+                                                    <span class="text">1 Jul 2018</span>
+                                                </li>
+                                                <li class="status-item">
+                                                    <span class="text"><span class="cm-line-break">Awaiting</span><span class="cm-line-break">Feedback</span></span>
+                                                </li>
+                                                <li class="status-item">
+                                                    <button class="icon-text">
+                                                        <span class="icon icon-nohire"></span>
+                                                        <span class="text">No Hire</span>
+                                                    </button>
+                                                    <span class="text">1 Jul 2018</span>
+                                                </li>
+                                                <!-- <li class="status-item">
+                                                    <button class="icon-text typ-no-click">
+                                                        <span class="icon icon-cal"></span>
+                                                        <span class="text">1 Jul 2018</span>
+                                                    </button>
+                                                </li> -->
+                                            </ul>
+                                        </div>
+                                        <div class="count-wrap">
+                                            <span class="count">7</span>
+                                            <span class="count">3</span>
+                                        </div>
+                                        <div class="comment-wrap">
+                                            <p class="text">Metus etiam. Platea aliquet vulputate. Egestas. Lacinia ultrices. Pharetra. Quisque odio morbi sod tea aliquet vulputate.teame</p>
+                                        </div>
+                                        <button mat-button [matMenuTriggerFor]="menu" class="more-btn"><span class="icon icon-more"></span></button>
+                                <mat-menu #menu="matMenu">
+                                    <button mat-menu-item>Edit Comment</button>
+                                    <button mat-menu-item>Hide Candidate</button>
+                                </mat-menu>
+                                    </div>
+                                </li>
+                                <li class="card-item">
+                                    <div class="mod-candidate-card">
+                                        <div class="candidate-info">
+                                            <span class="img-wrap">
+                                                <img src="../assets/images/profile.png" alt="profile">
+                                            </span>
+                                            <div class="data-wrap">
+                                                <strong class="name">Kunal Kamra</strong>
+                                                <span class="text">Director</span>
+                                                <span class="text">Piramal Enterprises</span>
+                                                <span class="text cm-line-break">Mumbai</span>
+                                            </div>
+                                        </div>
+                                        <div class="status-wrap">
+                                            <ul class="status-list">
+                                                <li class="status-item">
+                                                    <button class="icon-text">
+                                                        <span class="icon icon-hire"></span>
+                                                        <span class="text">Hire</span>
+                                                    </button>
+                                                    <span class="text">1 Jul 2018</span>
+                                                </li>
+                                                <li class="status-item">
+                                                    <span class="text"><span class="cm-line-break">Awaiting</span><span class="cm-line-break">Feedback</span></span>
+                                                </li>
+                                                <li class="status-item">
+                                                    <button class="icon-text">
+                                                        <span class="icon icon-nohire"></span>
+                                                        <span class="text">No Hire</span>
+                                                    </button>
+                                                    <span class="text">1 Jul 2018</span>
+                                                </li>
+                                                <li class="status-item">
+                                                    <button class="icon-text typ-no-click">
+                                                        <span class="icon icon-cal"></span>
+                                                        <span class="text">1 Jul 2018</span>
+                                                    </button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="count-wrap">
+                                            <span class="count">7</span>
+                                            <span class="count">3</span>
+                                        </div>
+                                        <div class="comment-wrap">
+                                            <p class="text">Metus etiam. Platea aliquet vulputate. Egestas. Lacinia ultrices. Pharetra. Quisque odio morbi sod tea aliquet vulputate.teame</p>
+                                        </div>
+                                        <button mat-button [matMenuTriggerFor]="menu" class="more-btn"><span class="icon icon-more"></span></button>
+                                <mat-menu #menu="matMenu">
+                                    <button mat-menu-item>Edit Comment</button>
+                                    <button mat-menu-item>Hide Candidate</button>
+                                </mat-menu>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="bs-section">
+            <div class="container">
+                <div class="sec-head">
+                    <h2 class="sec-title">Dropped</h2>
+                </div>
+                <div class="sec-cont">
+                    <div class="bs-card-table">
+                        <ul class="card-list">
+                            <li class="card-item">
+                                <div class="mod-candidate-card">
+                                    <div class="candidate-info">
+                                        <span class="img-wrap">
+                                            <img src="../assets/images/avatar.png" alt="avatar">
+                                        </span>
+                                        <div class="data-wrap">
+                                            <strong class="name">Shridhar Joshi</strong>
+                                            <span class="text">Director</span>
+                                            <span class="text">Piramal Enterprises</span>
+                                            <span class="text cm-line-break">Mumbai</span>
+                                        </div>
+                                    </div>
+                                    <div class="status-wrap">
+                                        <ul class="status-list">
+                                            <li class="status-item">
+                                                <button class="icon-text">
+                                                    <span class="icon icon-nohire"></span>
+                                                    <span class="text">No Hire</span>
+                                                </button>
+                                                <span class="text">1 Jul 2018</span>
+                                            </li>
+                                            <li class="status-item">
+                                                <button class="icon-text">
+                                                    <span class="icon icon-nohire"></span>
+                                                    <span class="text">No Hire</span>
+                                                </button>
+                                                <span class="text">1 Jul 2018</span>
+                                            </li>
+                                            <li class="status-item">
+                                                <button class="icon-text typ-no-click">
+                                                    <span class="icon icon-cal"></span>
+                                                    <span class="text">1 Jul 2018</span>
+                                                </button>
+                                            </li>
+                                            <li class="status-item">
+                                                <button class="icon-text typ-no-click">
+                                                    <span class="icon icon-cal"></span>
+                                                    <span class="text">1 Jul 2018</span>
+                                                </button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="count-wrap">
+                                        <span class="count">4</span>
+                                        <span class="count">3</span>
+                                    </div>
+                                    <div class="comment-wrap">
+                                        <p class="text">Metus etiam. Platea aliquet vulputate. Egestas. Lacinia ultrices. Pharetra. Quisque odio morbi sod tea aliquet vulputate.teame</p>
+                                    </div>
+                                    <button mat-button [matMenuTriggerFor]="menu" class="more-btn"><span class="icon icon-more"></span></button>
+                                <mat-menu #menu="matMenu">
+                                    <button mat-menu-item>Edit Comment</button>
+                                    <button mat-menu-item>Hide Candidate</button>
+                                </mat-menu>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

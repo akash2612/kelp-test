@@ -1,0 +1,20 @@
+// bs-section
+
+.bs-section {
+    padding: get-vw(39px) get-vw(25px) 0;
+    .sec-head {
+        margin-bottom: get-vw(14px);
+    }
+    .sec-title {
+        font-size: get-vw(16px);
+        line-height: get-vw(20px);
+        color: $clr-primary;
+        font-weight: $font-semibold;
+    }
+    .card-item {
+        margin-bottom: get-vw(18px);
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+}
