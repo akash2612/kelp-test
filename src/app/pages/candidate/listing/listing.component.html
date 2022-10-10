@@ -110,18 +110,18 @@
                             </div>
                         </div>
                         <div class="table-body">
-                            <ul class="card-list">
-                                <li class="card-item">
+                            <ul class="card-list" cdkDropList (cdkDropListDropped)="drop($event)">
+                                <li class="card-item" *ngFor="let candidate of candidateShortList" cdkDrag>
                                     <div class="mod-candidate-card">
                                         <div class="candidate-info">
                                             <span class="img-wrap">
                                                 <img src="../assets/images/profile.png" alt="profile">
                                             </span>
                                             <div class="data-wrap">
-                                                <strong class="name">Aniket Joshi</strong>
-                                                <span class="text">Director</span>
-                                                <span class="text">Piramal Enterprises</span>
-                                                <span class="text cm-line-break">Mumbai</span>
+                                                <strong class="name">{{candidate['name']}}</strong>
+                                                <span class="text">{{candidate['designation']}}, </span>
+                                                <span class="text">{{candidate['company']}}</span>
+                                                <span class="text cm-line-break">{{candidate['city']}}</span>
                                             </div>
                                         </div>
                                         <div class="status-wrap">
@@ -152,125 +152,17 @@
                                             </ul>
                                         </div>
                                         <div class="count-wrap">
-                                            <span class="count">7</span>
-                                            <span class="count">3</span>
+                                            <span class="count">{{candidate['leads']}}</span>
+                                            <span class="count">{{candidate['captured']}}</span>
                                         </div>
                                         <div class="comment-wrap">
-                                            <p class="text">Metus etiam. Platea aliquet vulputate. Egestas. Lacinia ultrices. Pharetra. Quisque odio morbi sod tea aliquet vulputate.teame</p>
+                                            <p class="text">{{candidate['comments']}}</p>
                                         </div>
                                         <button mat-button [matMenuTriggerFor]="menu" class="more-btn"><span class="icon icon-more"></span></button>
                                         <mat-menu #menu="matMenu">
                                             <button mat-menu-item>Edit Comment</button>
                                             <button mat-menu-item>Hide Candidate</button>
                                         </mat-menu>
-                                    </div>
-                                </li>
-                                <li class="card-item">
-                                    <div class="mod-candidate-card">
-                                        <div class="candidate-info">
-                                            <span class="img-wrap">
-                                                <img src="../assets/images/profile.png" alt="profile">
-                                            </span>
-                                            <div class="data-wrap">
-                                                <strong class="name">Kunjan Kumar</strong>
-                                                <span class="text">Director</span>
-                                                <span class="text">Housing and Development…</span>
-                                                <span class="text cm-line-break">New Delhi</span>
-                                            </div>
-                                        </div>
-                                        <div class="status-wrap">
-                                            <ul class="status-list">
-                                                <li class="status-item">
-                                                    <button class="icon-text">
-                                                        <span class="icon icon-hire"></span>
-                                                        <span class="text">Hire</span>
-                                                    </button>
-                                                    <span class="text">1 Jul 2018</span>
-                                                </li>
-                                                <li class="status-item">
-                                                    <span class="text"><span class="cm-line-break">Awaiting</span><span class="cm-line-break">Feedback</span></span>
-                                                </li>
-                                                <li class="status-item">
-                                                    <button class="icon-text">
-                                                        <span class="icon icon-nohire"></span>
-                                                        <span class="text">No Hire</span>
-                                                    </button>
-                                                    <span class="text">1 Jul 2018</span>
-                                                </li>
-                                                <!-- <li class="status-item">
-                                                    <button class="icon-text typ-no-click">
-                                                        <span class="icon icon-cal"></span>
-                                                        <span class="text">1 Jul 2018</span>
-                                                    </button>
-                                                </li> -->
-                                            </ul>
-                                        </div>
-                                        <div class="count-wrap">
-                                            <span class="count">7</span>
-                                            <span class="count">3</span>
-                                        </div>
-                                        <div class="comment-wrap">
-                                            <p class="text">Metus etiam. Platea aliquet vulputate. Egestas. Lacinia ultrices. Pharetra. Quisque odio morbi sod tea aliquet vulputate.teame</p>
-                                        </div>
-                                        <button mat-button [matMenuTriggerFor]="menu" class="more-btn"><span class="icon icon-more"></span></button>
-                                <mat-menu #menu="matMenu">
-                                    <button mat-menu-item>Edit Comment</button>
-                                    <button mat-menu-item>Hide Candidate</button>
-                                </mat-menu>
-                                    </div>
-                                </li>
-                                <li class="card-item">
-                                    <div class="mod-candidate-card">
-                                        <div class="candidate-info">
-                                            <span class="img-wrap">
-                                                <img src="../assets/images/profile.png" alt="profile">
-                                            </span>
-                                            <div class="data-wrap">
-                                                <strong class="name">Kunal Kamra</strong>
-                                                <span class="text">Director</span>
-                                                <span class="text">Piramal Enterprises</span>
-                                                <span class="text cm-line-break">Mumbai</span>
-                                            </div>
-                                        </div>
-                                        <div class="status-wrap">
-                                            <ul class="status-list">
-                                                <li class="status-item">
-                                                    <button class="icon-text">
-                                                        <span class="icon icon-hire"></span>
-                                                        <span class="text">Hire</span>
-                                                    </button>
-                                                    <span class="text">1 Jul 2018</span>
-                                                </li>
-                                                <li class="status-item">
-                                                    <span class="text"><span class="cm-line-break">Awaiting</span><span class="cm-line-break">Feedback</span></span>
-                                                </li>
-                                                <li class="status-item">
-                                                    <button class="icon-text">
-                                                        <span class="icon icon-nohire"></span>
-                                                        <span class="text">No Hire</span>
-                                                    </button>
-                                                    <span class="text">1 Jul 2018</span>
-                                                </li>
-                                                <li class="status-item">
-                                                    <button class="icon-text typ-no-click">
-                                                        <span class="icon icon-cal"></span>
-                                                        <span class="text">1 Jul 2018</span>
-                                                    </button>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="count-wrap">
-                                            <span class="count">7</span>
-                                            <span class="count">3</span>
-                                        </div>
-                                        <div class="comment-wrap">
-                                            <p class="text">Metus etiam. Platea aliquet vulputate. Egestas. Lacinia ultrices. Pharetra. Quisque odio morbi sod tea aliquet vulputate.teame</p>
-                                        </div>
-                                        <button mat-button [matMenuTriggerFor]="menu" class="more-btn"><span class="icon icon-more"></span></button>
-                                <mat-menu #menu="matMenu">
-                                    <button mat-menu-item>Edit Comment</button>
-                                    <button mat-menu-item>Hide Candidate</button>
-                                </mat-menu>
                                     </div>
                                 </li>
                             </ul>
@@ -297,7 +189,7 @@
                                         </span>
                                         <div class="data-wrap">
                                             <strong class="name">Shridhar Joshi</strong>
-                                            <span class="text">Director</span>
+                                            <span class="text">Director, </span>
                                             <span class="text">Piramal Enterprises</span>
                                             <span class="text cm-line-break">Mumbai</span>
                                         </div>
