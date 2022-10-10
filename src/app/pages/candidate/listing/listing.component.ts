@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {CdkDragDrop, moveItemInArray} from '@angular/cdk/drag-drop';
-import SwiperCore, { Navigation} from 'swiper';
 import {FormControl} from '@angular/forms';
-
-SwiperCore.use([Navigation]);
+import { OwlOptions } from 'ngx-owl-carousel-o';
 
 @Component({
   selector: 'app-listing',
@@ -13,6 +11,17 @@ SwiperCore.use([Navigation]);
 export class ListingComponent implements OnInit {
 
   constructor() { }
+  customOptions: OwlOptions = {
+    loop: true,
+    mouseDrag: false,
+    touchDrag: false,
+    pullDrag: false,
+    dots: false,
+    navSpeed: 700,
+    navText: ['', ''],
+    nav: true
+  }
+
   joiningStatusList: any[] = [
     {
       value:'../assets/images/hire.png'
