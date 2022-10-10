@@ -13,12 +13,38 @@
     }
     .card-item {
         margin-bottom: get-vw(18px);
+        position: relative;
+        border: 1px solid transparent;
+        // transition: 0.3s ease-in-out;
         &:last-of-type {
             margin-bottom: 0;
         }
-        &:focus {
+        &:active,
+        &:focus,
+        &:hover {
             border: 1px solid #65A2F7;
             border-radius: 2px;
+            .icon-drag {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+        .icon-drag {
+            visibility: hidden;
+            opacity: 0;
+            transition: all 0.3s ease-in-out;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: get-vw(-25px);
+            display: inline-block;
+            width: get-vw(12px);
+            height: get-vw(16px);
+            cursor: move;
+            background-image: url(../../images/drag.svg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
         }
     }
 }

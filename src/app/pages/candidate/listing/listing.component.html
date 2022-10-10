@@ -112,6 +112,7 @@
                         <div class="table-body">
                             <ul class="card-list" cdkDropList (cdkDropListDropped)="drop($event)">
                                 <li class="card-item" *ngFor="let candidate of candidateShortList" cdkDrag>
+                                    <span class="icon-drag"></span>
                                     <div class="mod-candidate-card">
                                         <div class="candidate-info">
                                             <span class="img-wrap">
