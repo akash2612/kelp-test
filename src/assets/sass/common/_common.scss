@@ -70,6 +70,10 @@ body{
     }
 }
 
+.mat-select-panel-wrap {
+    min-width: get-vw(85px);
+}
+
 .mat-select-panel {
     min-width: initial!important;
     .mat-option-text {
